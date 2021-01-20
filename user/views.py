@@ -3,7 +3,7 @@ from django.http.response import HttpResponse
 from .models import Users
 
 def index(req):
-    return HttpResponse("Welcome to my site")
+    return HttpResponse("Welcome to my site make new version")
 def register(req):
     users = Users.objects.order_by('username')
     return render(req, 'register.html', {'users':users})
