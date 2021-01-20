@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+	<head>
+	</head>
+	<body>
+		{% for user in users %}
+		<div>
+			<img src="{% static 'money.jpg' %}">
+			<p>이름 : {{user.username}}</p>
+			<p>이메일 : {{user.useremail}}</p>
+
+		</div>
+		{% endfor %}
+		
+	</body>
+
+</html>

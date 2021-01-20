@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	
+		<style>
+			.outer{
+				margin-top:10px;
+				}
+			.outer > div {
+				background-color : green;
+				margin-right : 10px;
+				display:inline-block;
+				width:300px;
+				padding-top:10px;
+				padding-left:10px;
+				height:300px;
+				vertical-align : top;
+				}
+			.outer > div > .date{
+				background-color : red;
+				margin-right : 10px;
+				color:blue;
+				font-size:1.5em;
+				}
+			.outer > div > .content{
+				background-color:white;
+				color : black;
+				margin-right : 10px;
+				}
+
+		</style>
+	</head>
+	<body>
+		<script>
+		// $는 jquery를 선택하는 함수 연산
+		// .html() 안에 아무것도 없으면 기존의 내용 불러올수 있음
+		// input 태그의 내용물을 확인하고싶으면 .val() 사용
+		
+		
+		// $(".div")(<-선택자).parent() : 선택자의 부모태그를 반환 (무조건 단수)
+		// $(".div")(<-선택자).children() : 선택자의 자식태그들을 배열 반환 (복수가 될 수 있음)
+			function func1(){
+				//$("#my_input").val();
+				// alert( $("#my_div1").html());
+				//$( "#cal_" + $( "#my_date" ).val() ).append( "<div class='content'>" +  $( "#my_input" ).val() + "</div>" );
+				$( $(".outer").children()[$("#my_date").val()-1] ).append("<div class='content'>" + $( "#my_input" ).val() + "</div>");
+			}
+		</script>
+		
+		<input type="text" id="my_date" placeholder="날짜">
+		
+		<input type="text" id="my_input" placeholder="할 일">
+		
+		<button onclick="func1();">할 일 추가</button>
+		
+		<br>
+		
+		
+		<div class = "outer">
+			<div>
+				<div class="date">1일</div>
+			</div>
+			<div>
+				<div class="date">2일</div>
+			</div>
+			<div>
+				<div class="date">3일</div>
+			</div>
+		</div>
+			
+		
+	</body>
+</html>
+

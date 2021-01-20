@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>
+		회원가입
+		</title>
+	</head>
+	<body>
+		
+		<form method="post">
+			{% csrf_token %}
+			<h3>[회원가입]</h3>
+			<h5>이름</h5>
+			<input type="text" name="name" placeholder = "name">			
+			<br>
+			<h5>성별</h5>
+			<input type="radio" name = "gender" value = "man">man
+			<input type="radio" name = "gender" value = "woman">woman
+			<br>
+			<h5>생년월일</h5>
+			<select name="birthday">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select><br><br>
+			<input type="submit"></input>
+			
+		</form>
+	</body>
+	
+</html>
