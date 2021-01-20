@@ -34,6 +34,9 @@ def formtest(req):
             return render(req, "birthday.html")
         return render(req, "formtest2.html",data)
 
+def git(req):
+    return HttpResponse("visualcodetest-git")
+
 
 
 
