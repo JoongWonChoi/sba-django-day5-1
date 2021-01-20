@@ -38,6 +38,19 @@ def git(req):
     return HttpResponse("visualcodetest-git")
 
 
+def gugu(req):
+    num = req.GET.get('num','')
+    print(type(num))
+    return HttpResponse(f"gugu : <br> {num_gugu(num)}")
+
+def num_gugu(num):
+    str = ""
+    _num_ = int(num)
+    for i in range (1,10):
+        str += f"{_num_} x {i} = {_num_*i} <br>"
+        
+    return str
+
 
 
 
